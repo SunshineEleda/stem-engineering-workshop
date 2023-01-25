@@ -7,6 +7,12 @@ function App() {
 	useEffect(() => {
 		console.log(feedArray);
 	});
+
+	const onHandleChange = (e) => {
+			const newValue = e.target.value;
+
+			setFeedArray((feedArray) => [...feedArray, newValue]);
+		}
 	return (
 		<Container>
 			<header>
@@ -17,7 +23,7 @@ function App() {
 				<section>
 					{feedArray.map((feedItem, i) => (
 						<PostContainer>
-							{/**<p key={`${i}-feedItem`}>{feedItem}</p>*/}
+							<p key={`${i}-feedItem`}>{feedItem}</p>
 							{/**<img src={feedItem} />*/}
 						</PostContainer>
 					))}
@@ -29,7 +35,7 @@ function App() {
 						setFeedArray((feedArray) => [...feedArray, newValue]);
 					}}
 				></textarea>
-				<input type="submit" value="Post" onClick={() => {}}></input>
+				<input type="submit" value="Post" onClick={onHandleChange}></input>
 			</main>
 		</Container>
 	);

@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 	p {
-		color: yellow;
-		font-size: 2px;
+		color: black;
+		font-size: 20px;
 	}
 `;
 
