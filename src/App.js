@@ -7,13 +7,7 @@ function App() {
 	useEffect(() => {
 		console.log(feedArray);
 	});
-
-	// const onHandleChange = (e) => {
-	// 		const newValue = e.target.value;
-
-	// 		setFeedArray((feedArray) => [...feedArray, newValue]);
-	// 		e.target.value = '';
-	// 	}
+	
 	return (
 		<Container>
 			<header>
@@ -37,7 +31,7 @@ function App() {
 						// e.target.value = '';
 					}}
 				></textarea>
-				<input type="submit" value="Post" onClick={() => {}}></input>
+				<input type="submit" value="Post"></input>
 			</main>
 		</Container>
 	);
