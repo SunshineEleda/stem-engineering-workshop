@@ -8,12 +8,12 @@ function App() {
 		console.log(feedArray);
 	});
 
-	const onHandleChange = (e) => {
-			const newValue = e.target.value;
+	// const onHandleChange = (e) => {
+	// 		const newValue = e.target.value;
 
-			setFeedArray((feedArray) => [...feedArray, newValue]);
-			e.target.value = '';
-		}
+	// 		setFeedArray((feedArray) => [...feedArray, newValue]);
+	// 		e.target.value = '';
+	// 	}
 	return (
 		<Container>
 			<header>
@@ -24,7 +24,7 @@ function App() {
 				<section>
 					{feedArray.map((feedItem, i) => (
 						<PostContainer>
-							<p key={`${i}-feedItem`}>{feedItem}</p>
+							{/* <p key={`${i}-feedItem`}>{feedItem}</p> */}
 							{/**<img src={feedItem} />*/}
 						</PostContainer>
 					))}
@@ -34,10 +34,10 @@ function App() {
 						const newValue = e.target.value;
 
 						setFeedArray((feedArray) => [...feedArray, newValue]);
-						e.target.value = '';
+						// e.target.value = '';
 					}}
 				></textarea>
-				<input type="submit" value="Post" onClick={onHandleChange}></input>
+				<input type="submit" value="Post" onClick={() => {}}></input>
 			</main>
 		</Container>
 	);
