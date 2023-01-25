@@ -12,6 +12,7 @@ function App() {
 			const newValue = e.target.value;
 
 			setFeedArray((feedArray) => [...feedArray, newValue]);
+			e.target.value = '';
 		}
 	return (
 		<Container>
@@ -33,6 +34,7 @@ function App() {
 						const newValue = e.target.value;
 
 						setFeedArray((feedArray) => [...feedArray, newValue]);
+						e.target.value = '';
 					}}
 				></textarea>
 				<input type="submit" value="Post" onClick={onHandleChange}></input>
